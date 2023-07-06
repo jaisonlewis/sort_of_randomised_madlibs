@@ -8,8 +8,6 @@ noun2 = input("Enter an enchanted object here (type r to randomise)")
 if noun2 == ("r"):
    noun2 = nounb()
 
-
-
 madlib = (f"Once upon a time, in a {adjective()} kingdom far away, there lived a peasant named \
 {name}. One day, {name} decided to embark on a(n) {adjective()} adventure to find \
 a legendary {noun2}. Along the way, {name} encountered a {adjective()} {animal()} who became \
