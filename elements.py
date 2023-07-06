@@ -5,8 +5,6 @@ def adjective():
     with open("adjectives.txt", "r") as file:
         data = file.read()
         words = data.split()
-
-        # Generating a random number for word position
         word_pos = random.randint(0, len(words) - 1)
         return words[word_pos]
 
@@ -14,21 +12,15 @@ def adverb():
     with open("adverbs.txt", "r") as file:
         data = file.read()
         words = data.split()
-
-        # Generating a random number for word position
         word_pos = random.randint(0, len(words) - 1)
-
-    return words[word_pos]
+        return words[word_pos]
 
 def animal():
     with open("animals.txt", "r") as file:
         data = file.read()
         words = data.split()
-
-        # Generating a random number for word position
         word_pos = random.randint(0, len(words) - 1)
-
-    return words[word_pos]
+        return words[word_pos]
 
 def namer():
     with open("names.txt", "r") as file:
@@ -41,11 +33,8 @@ def noun():
     with open("nouns.txt", "r") as file:
         data = file.read()
         words = data.split()
-
-        # Generating a random number for word position
         word_pos = random.randint(0, len(words) - 1)
-
-    return words[word_pos]
+        return words[word_pos]
 
 def nounb():
     with open("noun2.txt", "r") as file:
@@ -59,15 +48,4 @@ def nounb():
     file_names = [file for file in os.listdir(directory) if file.endswith(".txt")]
     selected_file = random.choice(file_names)
     file_path = os.path.join(directory, selected_file)
-    with open(file_path, 'r') as file:
-        template = file.read()
-    filled_template = template.format(
-        adjective=adjective(),
-        noun=noun(),
-        noun2=nounb(),
-        animal=animal(),
-        name=namer(),
-        adverb=adverb()
-    )
-
-    return filled_template'''
+    with open(file_path, 'r') as file:''''
